@@ -149,12 +149,12 @@ def remove_cart_item(request, product_id, cart_item_id):
     if request.user.is_authenticated:
         cart_item = CartItem.objects.get(product=product, user=request.user, id=cart_item_id)
     else:
-        cart = Cart.objects.get(cart_id= _cart_id(request))
+        cart = Cart.objects.get(cart_id=_cart_id(request))
         cart_item = CartItem.objects.get(product=product, cart=cart, id=cart_item_id)
     cart_item.delete()
     return redirect('cart')
 
-def cart(request, total=0, quantity=0, cart_item=None):
+def cart(request, total=0, quantity=0, cart_items=None):
     try:
         tax = 0
         grand_total = 0
@@ -180,8 +180,8 @@ def cart(request, total=0, quantity=0, cart_item=None):
     }
     return render(request, 'store/cart.html', context)
 
-@login_required(login_url= 'login')
-def checkout(request, total=0, quantity=0, cart_item=None):
+@login_required(login_url='login')
+def checkout(request, total=0, quantity=0, cart_items=None):
         try:
             tax = 0
             grand_total = 0

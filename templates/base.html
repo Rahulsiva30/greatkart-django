@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -29,6 +29,9 @@
 <!-- custom javascript -->
 <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
 
+<!--paypal account-->
+<script src="https://www.paypal.com/sdk/js?client-id=AWAn9r6rsR6KnA-nE5ILCcQrUp9RXW0dBQF5qdyfByxAxVO7pHephf9-HOecUAEQvrwACK3xS0xmfjsx&currency=USD"></script>
+
 <script type="text/javascript">
 /// some script
 
@@ -43,6 +46,7 @@ $(document).ready(function() {
 </head>
 <body>
 
+
 <!--header-->
 {% include 'includes/navbar.html' %}
     
@@ -52,3 +56,5 @@ $(document).ready(function() {
 
 <!--footer-->
 {% include 'includes/footer.html' %}
+
+</html>
