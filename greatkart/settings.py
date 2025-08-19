@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-4u*7myj_q-&4-rgwn+j&wk6lu5)q)a39o)^9^lff66)^*i!%sd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["greatkart-django-fi6e.onrender.com'"]
 
 
 # Application definition
